@@ -10,7 +10,7 @@ def home(request):
 
 def search(request):
     query = request.GET['query']
-    sear_cour = Courses.objects.filter(cour_name__icontains=query)
+    sear_cour = Courses.objects.filter(cour_name__icontains=query)         # there is two underscore at courname__icontains
     return render(request,'search.html',{'sear_cour' : sear_cour})
 
 
