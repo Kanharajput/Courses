@@ -11,6 +11,3 @@ class Courses(models.Model):
 
     def __str__(self):
         return self.cour_name
-     
-
-
