@@ -9,5 +9,8 @@ class Courses(models.Model):
     cour_star = models.FloatField(default=None)
     cour_price = models.IntegerField(default=None)
 
+    class Meta:
+        verbose_name_plural = "Courses"
+        
     def __str__(self):
         return self.cour_name
