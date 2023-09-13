@@ -11,8 +11,8 @@ class Post(models.Model):
     para1 = models.TextField(max_length = 500)
     para2 = models.TextField(max_length = 500)
     highlighter = models.TextField(max_length = 300)
-    likes = models.ManyToManyField(User, related_name = "like_blog")
-    dislikes = models.ManyToManyField(User, related_name = "dislike_blog")
+    likes = models.ManyToManyField(User, related_name = "like_blog", null=True, blank=True)
+    dislikes = models.ManyToManyField(User, related_name = "dislike_blog", null=True, blank=True)
 
 
     def total_likes(self):
